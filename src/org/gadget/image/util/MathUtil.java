@@ -43,14 +43,16 @@ public class MathUtil {
     public static int mult(int num1, int num2) {
         boolean p = num1 > 0 && num2 > 0;
         if (!p) {
+            if (num1 == 0 || num2 == 0)
+                return 0;
             num1 = abs(num1);
             num2 = abs(num2);
         }
         int tmp = 0;
         while (num2 > 0) {
             if ((num2 & 1) > 0) tmp += num1;
-            num1 = num1 << 1;
-            num2 = num2 >> 1;
+            num1 <<= 1;
+            num2 >>= 1;
         }
         return p ? tmp : negative(tmp);
     }
@@ -65,6 +67,8 @@ public class MathUtil {
     public static int div(int num1, int num2) throws Exception {
         if (num2 == 0)
             throw new Exception("被除数不可为0！");
+        else if (num1 == 0)
+            return 0;
 
         boolean p = num1 > 0 && num2 > 0;
         if (!p) {
