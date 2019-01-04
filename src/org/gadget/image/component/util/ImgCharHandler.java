@@ -10,7 +10,7 @@ public class ImgCharHandler {
 
 //    private int[][] GrayScaleMatrix;
     private final static String index = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";
-    private final static double ratio = index.length() / 256;
+//    private final static double ratio = index.length() / 256;
 
     /**
      * 灰度矩阵 转换为 字符矩阵
@@ -24,8 +24,11 @@ public class ImgCharHandler {
         // 灰度映射字符
         for (int cmy = 0; cmy < img.height; cmy++) {
             for (int cmx = 0; cmx < img.width; cmx++) {
+                int gray = img.gray[cmy][cmx];
+                int ci = Math.round(gray * (index.length() + 1) / 255);
+                if (ci > index.length() - 1) ci = index.length() - 1;
 //                cm[cmy][cmx] = img.alpha[cmy][cmx] == 0 ? ' ' : index.charAt((int) (ratio * img.gray[cmy][cmx]));
-                cm[cmy][cmx] = index.charAt((int) (ratio * img.gray[cmy][cmx]));
+                cm[cmy][cmx] = index.charAt(ci);
             }
         }
         return cm;

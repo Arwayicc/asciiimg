@@ -1,11 +1,10 @@
 package org.gadget.image.component;
 
 public class CharMatrixData {
-    public int width, height;
     public char[][] matrix;
 
     public String toString() {
-        StringBuffer tmp = new StringBuffer();
+        StringBuilder tmp = new StringBuilder();
         for (char[] arr : matrix) {
             tmp.append(arr).append('\n');
         }
@@ -16,8 +15,6 @@ public class CharMatrixData {
     }
 
     public CharMatrixData(int width, int height) {
-        this.width = width;
-        this.height = height;
         matrix = new char[height][width];
     }
 }
