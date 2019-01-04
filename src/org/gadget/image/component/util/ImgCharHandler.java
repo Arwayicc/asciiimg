@@ -24,8 +24,8 @@ public class ImgCharHandler {
         // 灰度映射字符
         for (int cmy = 0; cmy < img.height; cmy++) {
             for (int cmx = 0; cmx < img.width; cmx++) {
-                cm[cmy][cmx] = img.alpha[cmy][cmx] == 0
-                        ? ' ' : index.charAt((int) (ratio * img.gray[cmy][cmx]));
+//                cm[cmy][cmx] = img.alpha[cmy][cmx] == 0 ? ' ' : index.charAt((int) (ratio * img.gray[cmy][cmx]));
+                cm[cmy][cmx] = index.charAt((int) (ratio * img.gray[cmy][cmx]));
             }
         }
         return cm;
@@ -40,7 +40,7 @@ public class ImgCharHandler {
      */
     public CharMatrixData toChatMatrix(ImgMatrixData img) throws Exception {
         // Gray Scale matrix
-        img.gray = PixelHandler.getGSMatrix(img);
+        PixelHandler.getGSMatrix(img);
         // chat matrix
         CharMatrixData data = new CharMatrixData(img.width, img.height);
         // put data

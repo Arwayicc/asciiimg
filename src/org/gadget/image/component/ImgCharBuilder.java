@@ -28,6 +28,10 @@ public class ImgCharBuilder {
         }
     }
 
+    public ImgMatrixData getImgData() {
+        return this.imd;
+    }
+
     public String getImgChar() throws Exception {
         Optional<ImgMatrixData> imdOpt = Optional.ofNullable(this.imd);
         ImgCharHandler ich = new ImgCharHandler();
