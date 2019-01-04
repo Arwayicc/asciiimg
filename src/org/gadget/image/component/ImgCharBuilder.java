@@ -29,7 +29,7 @@ public class ImgCharBuilder {
     }
 
     public String getImgChar() throws Exception {
-        Optional<ImgMatrixData> imdOpt = Optional.ofNullable(imd);
+        Optional<ImgMatrixData> imdOpt = Optional.ofNullable(this.imd);
         ImgCharHandler ich = new ImgCharHandler();
         String imgChar = "憨鸠！出错啦，乜都冇啊！";
         Optional<CharMatrixData> cmdOpt;

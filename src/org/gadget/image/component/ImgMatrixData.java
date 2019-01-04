@@ -5,7 +5,7 @@ package org.gadget.image.component;
  */
 public class ImgMatrixData {
     public int width, height;
-    public int[][] alpha, red, green, blue;
+    public int[][] alpha, red, green, blue, gray;
 
     private ImgMatrixData() {
     }
@@ -17,5 +17,6 @@ public class ImgMatrixData {
         red = new int[height][width];
         green = new int[height][width];
         blue = new int[height][width];
+        gray = new int[height][width];
     }
 }
