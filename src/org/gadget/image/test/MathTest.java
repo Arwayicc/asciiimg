@@ -1,11 +1,11 @@
-package org.gadget.image.util;
+package org.gadget.image.test;
 
 /**
  * 1，数值正负取反
  * 2，乘、除运算使用位运算
  * 3，……
  */
-public class MathUtil {
+public class MathTest {
 
     /**
      * 数值正负取反
