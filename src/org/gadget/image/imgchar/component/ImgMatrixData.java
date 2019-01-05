@@ -1,4 +1,4 @@
-package org.gadget.image.component;
+package org.gadget.image.imgchar.component;
 
 /**
  * A, R, G, B

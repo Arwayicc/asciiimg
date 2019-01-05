@@ -1,7 +1,7 @@
-package org.gadget.image.component.util;
+package org.gadget.image.imgchar.component.util;
 
-import org.gadget.image.component.CharMatrixData;
-import org.gadget.image.component.ImgMatrixData;
+import org.gadget.image.imgchar.component.CharMatrixData;
+import org.gadget.image.imgchar.component.ImgMatrixData;
 
 /**
  * 字符图像处理器

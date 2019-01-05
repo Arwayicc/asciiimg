@@ -1,7 +1,7 @@
-package org.gadget.image.component;
+package org.gadget.image.imgchar.component;
 
-import org.gadget.image.component.util.ImageReader;
-import org.gadget.image.component.util.ImgCharHandler;
+import org.gadget.image.imgchar.component.util.ImageReader;
+import org.gadget.image.imgchar.component.util.ImgCharHandler;
 
 import java.util.Optional;
 
