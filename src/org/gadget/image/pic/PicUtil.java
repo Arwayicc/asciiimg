@@ -20,14 +20,9 @@ public class PicUtil implements PictureI {
     @Override
     public void read(String path) {
         try {
-            File image = new File(path);
-            if (image.exists()) {
-                this.buff = ImageIO.read(image);
-                this.width = buff.getWidth();
-                this.height = buff.getHeight();
-            } else {
-                System.err.println("file does'n exist!");
-            }
+            this.buff = ImageIO.read(new File(path));
+            this.width = buff.getWidth();
+            this.height = buff.getHeight();
         } catch (IOException e) {
             e.printStackTrace();
         }

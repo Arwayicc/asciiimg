@@ -9,8 +9,9 @@ public class Main {
     }
 
     private static void imgChar() {
-        ImgCharBuilder builder = new ImgCharBuilder("/home/dong/data/d/files/pictures/头像/PriaseTheSun.jpg");
-        builder.setImgCharSize(180, 180);
+        String path = "source/PriaseTheSun.jpg";
+        ImgCharBuilder builder = new ImgCharBuilder(path);
+        builder.setImgCharSize(50, 50);
         try {
             String imgChar = builder.getImgChar();
             System.out.println("imgChar = \n" + imgChar);
