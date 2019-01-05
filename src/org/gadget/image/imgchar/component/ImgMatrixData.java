@@ -1,7 +1,7 @@
 package org.gadget.image.imgchar.component;
 
 /**
- * A, R, G, B
+ * R, G, B
  */
 public class ImgMatrixData {
     public int width, height;
